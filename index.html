@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="DevDylan" />
+    <meta
+      name="description"
+      content="A game of Tic Tac Toe built with JavaScript"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevDylan - Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="modal open-modal">
+      <div class="modal-box open-modal-box">
+        <h2 class="modal-header">Which do you want to play as?</h2>
+
+        <div class="choices">
+          <button class="choice" id="X">X</button>
+          <button class="choice" id="O">O</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="cont">
+      <p class="play-as"></p>
+
+      <div class="game-grid">
+        <div class="grid-item playable" id="a1"></div>
+        <div class="grid-item playable" id="b1"></div>
+        <div class="grid-item playable" id="c1"></div>
+        <div class="grid-item playable" id="a2"></div>
+        <div class="grid-item playable" id="b2"></div>
+        <div class="grid-item playable" id="c2"></div>
+        <div class="grid-item playable" id="a3"></div>
+        <div class="grid-item playable" id="b3"></div>
+        <div class="grid-item playable" id="c3"></div>
+      </div>
+
+      <div class="scores">
+        <div class="player-score">0</div>
+        -
+        <div class="ai-score">0</div>
+      </div>
+
+      <button class="reset">Reset Scores</button>
+    </div>
+
+    <div class="win-modal">
+      <div class="win-modal-box">
+        <h1 class="win-text"></h1>
+      </div>
+    </div>
+
+    <footer>DevDylan &copy;2022</footer>
+  </body>
+</html>
