@@ -4,7 +4,7 @@
 
 Play tictactoe against a program with no decision-making capabilities.
 
-View [Live Site](https://)
+View [Live Site](https://dev-dylann.github.io/tictactoe/)
 
 ## Features
 
