@@ -407,7 +407,7 @@ const gameInput = () => {
         }
       } else {
         if (navigator.vibrate) {
-          navigator.vibrate(1000);
+          navigator.vibrate(250);
         }
       }
     };
