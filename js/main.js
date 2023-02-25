@@ -405,6 +405,10 @@ const gameInput = () => {
             userWins();
           }
         }
+      } else {
+        if (navigator.vibrate) {
+          navigator.vibrate(1000);
+        }
       }
     };
   });
