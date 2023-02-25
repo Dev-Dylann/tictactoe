@@ -381,27 +381,29 @@ const gameInput = () => {
 
   gridItem.forEach((box) => {
     box.onclick = () => {
-      const userSign = localStorage.getItem(`userSign`);
+      if (box.classList.contains(`playable`)) {
+        const userSign = localStorage.getItem(`userSign`);
 
-      box.classList.remove(`playable`);
-      box.innerHTML = userSign;
+        box.classList.remove(`playable`);
+        box.innerHTML = userSign;
 
-      let tie = aiTurn(userSign);
-      if (!tie) {
-        let winner = checkWin();
-        if (winner == `user`) {
-          userWins();
-        } else if (winner == `ai`) {
-          aiWins();
-        }
-      } else {
-        let winner = checkWin();
-        if (!winner) {
-          gameTie();
-        } else if (winner == `ai`) {
-          aiWins();
+        let tie = aiTurn(userSign);
+        if (!tie) {
+          let winner = checkWin();
+          if (winner == `user`) {
+            userWins();
+          } else if (winner == `ai`) {
+            aiWins();
+          }
         } else {
-          userWins();
+          let winner = checkWin();
+          if (!winner) {
+            gameTie();
+          } else if (winner == `ai`) {
+            aiWins();
+          } else {
+            userWins();
+          }
         }
       }
     };
